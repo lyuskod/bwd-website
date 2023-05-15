@@ -8,12 +8,15 @@ import { WalletView } from './components/WalletView'
 import { Tools } from './pages/Tools'
 import { FakeWalletChecker } from './pages/FakeWalletChecker'
 import { WalletHasher } from './pages/WalletHasher'
+import './FileUpload.css'
+import { Header } from './components/Header'
 
 function App() {
     return (
         <Router>
             <div className="overlay">
                 <div className="App">
+                    <Header />
                     <NavBar />
                     <Routes>
                         <Route exact path="/" element={<Home />} />

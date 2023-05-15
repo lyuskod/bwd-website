@@ -12,7 +12,7 @@ import {
     Link,
     Image,
 } from '@chakra-ui/react'
-import { generateBlockchainComLink } from '../scripts/address-helper'
+import { generateBlockchainComLink } from '../scripts/wallet-helper'
 import axios from 'axios'
 import { routes } from '../contants/routes'
 import Bitcoin from '../assets/icons/bitcoin.png'
@@ -36,7 +36,7 @@ export const WalletsTable = () => {
         >
             <Box overflowY="auto">
                 <Heading textShadow="0 5px #000000" textAlign="center">
-                    Scroll table to see all
+                    Under development
                 </Heading>
                 <Box overflowY="auto" maxHeight="450px">
                     <Table>

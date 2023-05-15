@@ -20,3 +20,21 @@ export const getShortWalletAddressRepresentation = (address) => {
     const lPart = address.slice(address.length - symbols_slice)
     return `${fPart}...${lPart}`
 }
+
+export const parseAddressFromWalletDatContent = (content) => {
+    return content
+        .match(/name"\w+/)[0]
+        .replace('name"', '')
+        .trim()
+}
+
+export const isValidWalletFromFormData = async (file) => {
+    if (!file) return false
+
+    const content = await file.text()
+    return (
+        file.name.endsWith('.dat') &&
+        content.includes('ckey!') &&
+        parseAddressFromWalletDatContent(content)
+    )
+}

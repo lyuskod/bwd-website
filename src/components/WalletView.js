@@ -3,7 +3,7 @@ import { Box, Link, Flex, Button, Text, Image } from '@chakra-ui/react'
 import {
     generateBlockchainComLink,
     generateBlockchairComLink,
-} from '../scripts/address-helper'
+} from '../scripts/wallet-helper'
 import { useNavigate, useParams } from 'react-router-dom'
 
 //Icons
