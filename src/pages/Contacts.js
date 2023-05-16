@@ -9,29 +9,25 @@ export const Contacts = () => {
             paddingBottom="150px"
         >
             <Box width="520px">
-                <div>
-                    <Text fontSize="48px" textShadow="0 5px #000000">
-                        Contacts
-                    </Text>
-                    <Text
-                        fontSize="30px"
-                        letterSpacing="-5.5%"
-                        fontFamily="VT323"
-                        textShadow="0 2px 2px #000000"
-                    >
-                        mail: admin@buywalletdat.com
-                    </Text>
-                </div>
-                <div>
-                    <Text
-                        fontSize="30px"
-                        letterSpacing="-5.5%"
-                        fontFamily="VT323"
-                        textShadow="0 2px 2px #000000"
-                    >
-                        telegram: @buywalletdat
-                    </Text>
-                </div>
+                <Text fontSize="48px" textShadow="0 5px #000000">
+                    Contacts
+                </Text>
+                <Text
+                    fontSize="30px"
+                    letterSpacing="-5.5%"
+                    fontFamily="VT323"
+                    textShadow="0 2px 2px #000000"
+                >
+                    mail: admin@buywalletdat.com
+                </Text>
+                <Text
+                    fontSize="30px"
+                    letterSpacing="-5.5%"
+                    fontFamily="VT323"
+                    textShadow="0 2px 2px #000000"
+                >
+                    telegram: @buywalletdat
+                </Text>
             </Box>
         </Flex>
     )

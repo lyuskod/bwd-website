@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react'
 import {
-    Box,
-    TableContainer,
-    Heading,
-    Table,
-    Thead,
     Tr,
     Th,
-    Tbody,
     Td,
+    Box,
     Link,
     Image,
+    Table,
+    Thead,
+    Tbody,
+    TableContainer,
+    Heading,
 } from '@chakra-ui/react'
-import { generateBlockchainComLink } from '../scripts/wallet-helper'
 import axios from 'axios'
 import { routes } from '../contants/routes'
 import Bitcoin from '../assets/icons/bitcoin.png'
+import React, { useEffect, useState } from 'react'
+import { generateBlockchainComLink } from '../scripts/wallet-helper'
 
 export const WalletsTable = () => {
     const [data, setData] = useState([])
@@ -58,7 +58,6 @@ export const WalletsTable = () => {
                                                 src={Bitcoin}
                                                 cursor="pointer"
                                                 boxSize="25px"
-                                                // width="25px"
                                                 margin="0 15px"
                                                 loading="lazy"
                                             />
@@ -67,7 +66,6 @@ export const WalletsTable = () => {
                                                 src={Bitcoin}
                                                 cursor="pointer"
                                                 boxSize="25px"
-                                                // width="25px"
                                                 margin="0 15px"
                                                 loading="lazy"
                                             />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex, Text } from '@chakra-ui/react'
-import { WalletsTable, WTable } from '../components/WalletsTable'
+import { WalletsTable } from '../components/WalletsTable'
 
 export const Wallets = () => {
     return (
@@ -14,9 +14,7 @@ export const Wallets = () => {
                 <Text fontSize="48px" textShadow="0 5px #000000">
                     Wallets
                 </Text>
-                <Box>
-                    <WalletsTable />
-                </Box>
+                <WalletsTable />
             </Box>
         </Flex>
     )

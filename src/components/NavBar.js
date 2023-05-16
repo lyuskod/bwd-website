@@ -1,21 +1,18 @@
 import React from 'react'
-import { Box, Flex, Image, Spacer } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
-
-// Icons
-import Telegram from '../assets/social-media-icons/telegram_32x32.png'
-import Email from '../assets/social-media-icons/email_32x32.png'
+import { Box, Flex, Image, Spacer } from '@chakra-ui/react'
+import Email from '../assets/smi/email_32x32.png'
+import Telegram from '../assets/smi/telegram_32x32.png'
 
 export const NavBar = () => {
     const navigate = useNavigate()
     const navigateHome = () => navigate('/')
+    const navigateTools = () => navigate('/tools')
     const navigateWallets = () => navigate('/wallets')
     const navigateContacts = () => navigate('/contacts')
-    const navigateTools = () => navigate('/tools')
 
     return (
         <Flex justify="space-between" align="center" padding="30px">
-            {/* Left NavBar */}
             <Flex justify="space-around" width="40%" padding="0 75px">
                 <Image
                     src={Email}
@@ -33,7 +30,6 @@ export const NavBar = () => {
                 />
             </Flex>
 
-            {/* Right NavBar */}
             <Flex
                 justify="space-around"
                 align="center"

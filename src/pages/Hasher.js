@@ -1,30 +1,31 @@
-import React, { useState } from 'react'
-import { Box, Flex, Text, Button, Input, Link } from '@chakra-ui/react'
-import { isValidWalletFromFormData } from '../scripts/wallet-helper'
 import axios from 'axios'
+import React, { useState } from 'react'
 import { routes } from '../contants/routes'
+import { Box, Flex, Text, Button, Input } from '@chakra-ui/react'
+import { isValidWalletFromFormData } from '../scripts/wallet-helper'
 
-export const FakeWalletChecker = () => {
+export const Hasher = () => {
     const [file, setFile] = useState(null)
-    const [data, setData] = useState(null)
+    const [hash, setHash] = useState(null)
     const [message, setMessage] = useState(null)
 
     const onInputChange = (e) => {
-        if (data) setData(null)
+        if (hash) setHash(null)
         setFile(e.target.files[0])
     }
     const onSubmit = async (e) => {
         e.preventDefault()
+
         setMessage(null)
         const isValid = await isValidWalletFromFormData(file)
         if (isValid) {
             const data = new FormData()
             data.append('file', file)
             const response = await axios.post(
-                routes.getWalletValidityByWallet,
+                routes.getWalletHashByWallet,
                 data
             )
-            setData(response.data)
+            setHash(response.data)
             return
         }
 
@@ -36,7 +37,7 @@ export const FakeWalletChecker = () => {
             setMessage('Uploaded file is not wallet.dat')
             return
         }
-        setData(null)
+        setHash(null)
     }
     return (
         <Flex
@@ -48,7 +49,7 @@ export const FakeWalletChecker = () => {
             <Box width="530px">
                 <Box>
                     <Text fontSize="48px" textShadow="0 5px #000000">
-                        Fake Wallet Checker
+                        Wallet Hasher
                     </Text>
                     <form method="post" action="#" id="#">
                         <Text
@@ -60,15 +61,13 @@ export const FakeWalletChecker = () => {
                             {message}
                         </Text>
                         <Text
-                            fontSize="30px"
+                            fontSize="20px"
                             letterSpacing="-5.5%"
                             fontFamily="VT323"
                             textShadow="0 2px 2px #000000"
                             align="center"
                         >
-                            {data?.validity
-                                ? `Validity: ${data.validity}%`
-                                : ''}
+                            {hash}
                         </Text>
                         <Box className="form-group files">
                             <Input
@@ -99,7 +98,7 @@ export const FakeWalletChecker = () => {
                         fontFamily="VT323"
                         textShadow="0 2px 2px #000000"
                     >
-                        Check your wallet.dat for fake using our online tool!
+                        Fetch hash from wallet.dat using our online tool!
                     </Text>
                 </Box>
             </Box>

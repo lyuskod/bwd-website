@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Image, Spacer } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 
 export const Header = () => {
     return (

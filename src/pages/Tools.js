@@ -1,10 +1,10 @@
-import { Box, Flex, Text, Link } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
+import { Box, Flex, Text, Link } from '@chakra-ui/react'
 
 export const Tools = () => {
     const navigate = useNavigate()
-    const navigateFakeWalletCheck = () => navigate('/tools/walletcheck')
     const navigateWalletHash = () => navigate('/tools/wallethash')
+    const navigateFakeWalletCheck = () => navigate('/tools/walletcheck')
 
     return (
         <Flex
