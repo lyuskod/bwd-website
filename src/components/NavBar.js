@@ -53,6 +53,7 @@ export const NavBar = () => {
                 >
                     Wallets
                 </Box>
+                <Spacer />
                 <Box
                     margin="0 15px"
                     cursor="pointer"

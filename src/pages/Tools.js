@@ -30,7 +30,7 @@ export const Tools = () => {
                         onClick={navigateFakeWalletCheck}
                         _hover={{ color: '#fa690e' }}
                     >
-                        Fake Wallet Checker
+                        Fake Wallet Checker (beta)
                     </Link>
                 </Box>
                 <Box>

@@ -48,7 +48,9 @@ export const Checker = () => {
             <Box width="530px">
                 <Text fontSize="48px" textShadow="0 5px #000000">
                     Fake Wallet Checker
+                    {<Text fontSize="10px">{'(beta)'}</Text>}
                 </Text>
+
                 <form method="post" action="#" id="#">
                     <Text
                         fontSize="30px"
