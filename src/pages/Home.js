@@ -31,7 +31,7 @@ export const Home = () => {
                     fontFamily="VT323"
                     textShadow="0 2px 2px #000000"
                 >
-                    Coming soon!
+                    Super low prices due opening!
                 </Text>
                 <Button
                     backgroundColor="#fa690e"

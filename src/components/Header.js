@@ -4,7 +4,7 @@ import { Flex } from '@chakra-ui/react'
 export const Header = () => {
     return (
         <Flex align="center" justifyContent="center" fontSize="10px">
-            {`< Website is under development />`}
+            {`www.buywalletdat.com`}
         </Flex>
     )
 }

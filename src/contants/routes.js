@@ -1,4 +1,4 @@
-const baseUrl = 'http://api.buywalletdat.com:5050/api'
+const baseUrl = 'https://api.buywalletdat.com/api'
 
 export const routes = {
     getAllWallets: `${baseUrl}/getAllWallets`,

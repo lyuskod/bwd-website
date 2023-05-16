@@ -36,7 +36,7 @@ export const WalletsTable = () => {
         >
             <Box overflowY="auto">
                 <Heading textShadow="0 5px #000000" textAlign="center">
-                    Under development
+                    Scroll table to see all
                 </Heading>
                 <Box overflowY="auto" maxHeight="450px">
                     <Table>
