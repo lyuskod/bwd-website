@@ -4,7 +4,6 @@ import {
     Td,
     Box,
     Link,
-    Image,
     Table,
     Thead,
     Tbody,
@@ -13,23 +12,11 @@ import {
 } from '@chakra-ui/react'
 import axios from 'axios'
 import { routes } from '../contants/routes'
-import Bitcoin from '../assets/icons/bitcoin.png'
 import React, { useEffect, useState } from 'react'
 import { cacheable } from '../scripts/cacheable'
 import { generateBlockchainComLink } from '../scripts/wallet-helper'
 
 export const WalletsTable = () => {
-    // const [data, setData] = useState([])
-    // const loadData = async () => {
-    //     const response = await axios.get(routes.getAllWallets)
-    //     setData(response.data)
-    // }
-
-    // useEffect(() => {
-    //     loadData()
-    // }, [])
-
-    ///-------
     const [data, setData] = useState([])
     const loadData = async () => {
         const response = await cacheable(
@@ -69,23 +56,7 @@ export const WalletsTable = () => {
                                 return (
                                     <Tr>
                                         <Td>{index + 1}</Td>
-                                        <Td>
-                                            <Image
-                                                src={Bitcoin}
-                                                cursor="pointer"
-                                                boxSize="25px"
-                                                margin="0 15px"
-                                                loading="lazy"
-                                            />
-                                            {wallet.Balance}
-                                            <Image
-                                                src={Bitcoin}
-                                                cursor="pointer"
-                                                boxSize="25px"
-                                                margin="0 15px"
-                                                loading="lazy"
-                                            />
-                                        </Td>
+                                        <Td>{`💰 ${wallet.Balance} 💰`}</Td>
                                         <Td>
                                             <Link
                                                 isExternal
