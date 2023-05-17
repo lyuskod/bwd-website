@@ -25,14 +25,6 @@ export const Home = () => {
                 >
                     Shop of bitcoin wallets with lost passwords
                 </Text>
-                <Text
-                    fontSize="25px"
-                    letterSpacing="-5.5%"
-                    fontFamily="VT323"
-                    textShadow="0 2px 2px #000000"
-                >
-                    Super low prices due opening!
-                </Text>
                 <Button
                     backgroundColor="#fa690e"
                     _hover={{ bgColor: '#45216b' }}
