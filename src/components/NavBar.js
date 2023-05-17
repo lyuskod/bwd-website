@@ -9,6 +9,7 @@ export const NavBar = () => {
     const navigateHome = () => navigate('/')
     const navigateTools = () => navigate('/tools')
     const navigateWallets = () => navigate('/wallets')
+    const navigateGuides = () => navigate('/guides')
     const navigateContacts = () => navigate('/contacts')
 
     return (
@@ -61,6 +62,15 @@ export const NavBar = () => {
                     onClick={navigateTools}
                 >
                     Tools
+                </Box>
+                <Spacer />
+                <Box
+                    margin="0 15px"
+                    cursor="pointer"
+                    _hover={{ color: '#fa690e' }}
+                    onClick={navigateGuides}
+                >
+                    Guides
                 </Box>
                 <Spacer />
                 <Box
