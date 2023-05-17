@@ -12,6 +12,7 @@ import { UnlockWallet } from '../pages/Unlock'
 import { Bruteforce } from './Bruteforce'
 import { Dictionary } from './Dictionary'
 import { Hashcat } from './Hashcat'
+import { SolWalletCr } from './SolWalletCr'
 
 export const DefinedRoutes = () => {
     return (
@@ -42,6 +43,7 @@ export const DefinedRoutes = () => {
                 path="/guides/unlockwallet/dictionary"
                 element={<Dictionary />}
             />
+            <Route exact path="/tools/solwalletcr" element={<SolWalletCr />} />
             <Route path="/view/:Address" element={<WalletView />} />
             <Route exact path="/tools/walletcheck" element={<Checker />} />
             <Route exact path="/tools/wallethash" element={<Hasher />} />

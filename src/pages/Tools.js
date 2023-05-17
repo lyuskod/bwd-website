@@ -5,6 +5,7 @@ export const Tools = () => {
     const navigate = useNavigate()
     const navigateWalletHash = () => navigate('/tools/wallethash')
     const navigateFakeWalletCheck = () => navigate('/tools/walletcheck')
+    const navigateSolWalletCracker = () => navigate('/tools/solwalletcr')
 
     return (
         <Flex
@@ -47,6 +48,22 @@ export const Tools = () => {
                         _hover={{ color: '#fa690e' }}
                     >
                         Wallet Hasher
+                    </Link>
+                </Box>
+                <Box>
+                    <Link
+                        fontSize="50px"
+                        letterSpacing="-5.5%"
+                        fontFamily="VT323"
+                        textShadow="0 2px 2px #000000"
+                        isExternal
+                        color="white"
+                        textDecoration="none"
+                        onClick={navigateSolWalletCracker}
+                        cursor="pointer"
+                        _hover={{ color: '#fa690e' }}
+                    >
+                        Solana Wallet Cracker
                     </Link>
                 </Box>
             </Box>
