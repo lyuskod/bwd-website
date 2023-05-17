@@ -15,12 +15,28 @@ import axios from 'axios'
 import { routes } from '../contants/routes'
 import Bitcoin from '../assets/icons/bitcoin.png'
 import React, { useEffect, useState } from 'react'
+import { cacheable } from '../scripts/cacheable'
 import { generateBlockchainComLink } from '../scripts/wallet-helper'
 
 export const WalletsTable = () => {
+    // const [data, setData] = useState([])
+    // const loadData = async () => {
+    //     const response = await axios.get(routes.getAllWallets)
+    //     setData(response.data)
+    // }
+
+    // useEffect(() => {
+    //     loadData()
+    // }, [])
+
+    ///-------
     const [data, setData] = useState([])
     const loadData = async () => {
-        const response = await axios.get(routes.getAllWallets)
+        const response = await cacheable(
+            async () => await axios.get(routes.getAllWallets),
+            'wallets',
+            {}
+        )
         setData(response.data)
     }
 
