@@ -5,14 +5,14 @@ import { Box } from '@chakra-ui/react'
 import { NavBar } from './components/NavBar'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { DefinedRoutes } from './components/Routes'
-import { Header } from './components/Header'
+import { SalesCounter } from './components/SaleCounter'
 
 function App() {
     return (
         <Router>
             <Box className="overlay">
                 <Box className="App">
-                    <Header />
+                    <SalesCounter />
                     <NavBar />
                     <DefinedRoutes />
                 </Box>
