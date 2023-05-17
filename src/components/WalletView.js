@@ -5,6 +5,7 @@ import {
 } from '../scripts/wallet-helper'
 import { routes } from '../contants/routes'
 import React, { useEffect, useState } from 'react'
+import { cacheable } from '../scripts/cacheable'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Box, Link, Flex, Button, Text, Image } from '@chakra-ui/react'
 
@@ -16,11 +17,19 @@ export const WalletView = () => {
 
     const [wallet, setWallet] = useState({})
     const { Address } = useParams()
+
+    const loadData = async () => {
+        const response = await cacheable(
+            async () => await axios.get(routes.getWalletByAddress + Address),
+            `WalletView_${Address}`,
+            {}
+        )
+        setWallet({ ...response.data[0] })
+    }
     useEffect(() => {
-        axios
-            .get(routes.getWalletByAddress + Address)
-            .then((resp) => setWallet({ ...resp.data[0] }))
-    }, [Address])
+        loadData()
+    })
+
     return (
         <Flex
             justify="center"
