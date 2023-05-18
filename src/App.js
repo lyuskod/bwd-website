@@ -8,18 +8,18 @@ import { DefinedRoutes } from './components/Routes'
 import { WebsiteHeader } from './components/WebsiteHeader'
 
 function App() {
-    return (
-        <Router>
-            <Box className="overlay">
-                <Box className="App">
-                    <WebsiteHeader />
-                    <NavBar />
-                    <DefinedRoutes />
-                </Box>
-                <Box className="moving-background" />
-            </Box>
-        </Router>
-    )
+  return (
+    <Router>
+      <Box className="overlay">
+        <Box className="App">
+          <WebsiteHeader />
+          <NavBar />
+          <DefinedRoutes />
+        </Box>
+        <Box className="moving-background" />
+      </Box>
+    </Router>
+  )
 }
 
 export default App
