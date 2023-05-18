@@ -11,6 +11,7 @@ export const NavBar = () => {
   const navigateWallets = () => navigate('/wallets')
   const navigateGuides = () => navigate('/guides')
   const navigateContacts = () => navigate('/contacts')
+  const navigateEarn = () => navigate('/earn')
 
   return (
     <Flex justify="space-between" align="center" padding="30px">
@@ -31,7 +32,7 @@ export const NavBar = () => {
         />
       </Flex>
 
-      <Flex justify="space-around" align="center" width="40%" padding="30px">
+      <Flex justify="space-around" align="center" width="50%" padding="30px">
         <Box
           margin="0 15px"
           cursor="pointer"
@@ -48,6 +49,15 @@ export const NavBar = () => {
           onClick={navigateWallets}
         >
           Wallets
+        </Box>
+        <Spacer />
+        <Box
+          margin="0 15px"
+          cursor="pointer"
+          _hover={{ color: '#fa690e' }}
+          onClick={navigateEarn}
+        >
+          Earn
         </Box>
         <Spacer />
         <Box
