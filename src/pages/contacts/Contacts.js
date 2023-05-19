@@ -2,6 +2,7 @@ import { Box, Flex, Text, Link } from '@chakra-ui/react'
 
 export const Contacts = () => {
   const telegramBWDAdminLink = 'https:/t.me/buywalletdat'
+  const discordInviteLink = 'https://discord.gg/6yCh3bkfuE'
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
       <Box width="700px" className='pixel-border'>
@@ -23,9 +24,10 @@ export const Contacts = () => {
             telegram: @buywalletdat
           </Text>
         </Link>
-        {/* <Link
-          href={telegramBWDAdminLink}
-          _hover={{ color: '#fa690e' }}
+        <Link
+        color="#fa690e"
+          href={discordInviteLink}
+          _hover={{ color: '#e9bb00' }}
           isExternal
           cursor="pointer"
         >
@@ -35,9 +37,9 @@ export const Contacts = () => {
             fontFamily="VT323"
             textShadow="0 2px 2px #000000"
           >
-            Discord: @buywalletdat
+            {`-> Join hack forces with others on our Discord! <-`}
           </Text>
-        </Link> */}
+        </Link>
         <Text
           fontSize="30px"
           letterSpacing="-5.5%"

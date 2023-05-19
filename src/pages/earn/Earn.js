@@ -16,7 +16,7 @@ export const Earn = () => {
           fontFamily="VT323"
           textShadow="0 2px 2px #000000"
         >
-          Send your wallet.dat to us and earn 50% from each sale
+          Send your wallet.dat (even public one) to us and earn 50% from each sale
         </Text>
         <Text
           fontSize="30px"
