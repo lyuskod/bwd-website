@@ -9,10 +9,9 @@ export const SolWalletCr = () => {
       align="center"
       height="100vh"
       paddingBottom="150px"
-      className="pixel-border"
       overflowY="scroll"
     >
-      <Box width="700">
+      <Box width="700px" className="pixel-border">
         <Text fontSize="35px" textShadow="0 5px #000000">
           Solana Wallet Cracker
         </Text>

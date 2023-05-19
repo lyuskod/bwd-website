@@ -41,7 +41,7 @@ export const WalletView = () => {
         loading="lazy"
       />
       <Box width="500px" height="560px" className="pixel-border">
-        <Box bgColor="-moz-initial">
+        <Box bgColor="black">
           <Button className="pixel-button" bgColor="red" onClick={navigateBack}>
             GO BACK
           </Button>

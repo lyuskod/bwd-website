@@ -5,7 +5,7 @@ import { WalletsTable } from './WalletsTable'
 export const Wallets = () => {
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box>
+      <Box width="950px" className='pixel-border'>
         <Text fontSize="40px" textShadow="0 5px #000000">
           Wallets
         </Text>

@@ -84,8 +84,8 @@ body {
 }
 
 .pixel-border {
-  /* width: 50%; */
-  height: 50vh;
+  /* width: 45%; */
+  /* height: 40vh; */
   margin: 2em auto;
   box-shadow: -15px 0 0 0 white, 15px 0 0 0 white, 0 -15px 0 0 white,
     0 15px 0 0 white;

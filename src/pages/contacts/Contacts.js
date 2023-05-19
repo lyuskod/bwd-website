@@ -4,7 +4,7 @@ export const Contacts = () => {
   const telegramBWDAdminLink = 'https:/t.me/buywalletdat'
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="600px" className='pixel-border'>
+      <Box width="700px" className='pixel-border'>
         <Text fontSize="40px" textShadow="0 5px #000000">
           Contacts
         </Text>

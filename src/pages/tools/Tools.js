@@ -9,7 +9,7 @@ export const Tools = () => {
 
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="600px" className='pixel-border'>
+      <Box width="700px" className="pixel-border">
         <Box>
           <Text fontSize="40px" textShadow="0 5px #000000">
             Tools
@@ -60,6 +60,8 @@ export const Tools = () => {
           >
             Solana Wallet Cracker
           </Link>
+          <Text/>
+          <Text/>
         </Box>
       </Box>
     </Flex>

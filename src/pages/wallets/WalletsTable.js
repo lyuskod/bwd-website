@@ -32,11 +32,8 @@ export const WalletsTable = () => {
   }, [])
 
   return (
-    <TableContainer className="styled-table" maxHeight="450px" overflowY="auto">
+    <TableContainer className="styled-table" maxHeight="450px">
       <Box overflowY="auto">
-        <Heading textShadow="0 5px #000000" textAlign="center">
-          Scroll table to see all
-        </Heading>
         <Box overflowY="auto" maxHeight="450px">
           <Table>
             <Thead position="sticky" top={0} background="#c09522">

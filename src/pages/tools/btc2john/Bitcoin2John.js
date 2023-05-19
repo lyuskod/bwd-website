@@ -42,9 +42,8 @@ export const Bitcoin2john = () => {
       align="center"
       height="100vh"
       paddingBottom="150px"
-      className="pixel-border"
     >
-      <Box width="530px">
+      <Box width="700px" className="pixel-border">
         <Box>
           <Text fontSize="40px" textShadow="0 5px #000000">
             Bitcoin2john online

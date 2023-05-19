@@ -36,26 +36,20 @@ export const Validator = () => {
     setData(null)
   }
   return (
-    <Flex
-      justify="center"
-      align="center"
-      height="100vh"
-      paddingBottom="150px"
-      className="pixel-border"
-    >
-      <Box width="530px">
+    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
+      <Box width="700px" className="pixel-border">
         <Text fontSize="40px" textShadow="0 5px #000000">
           Wallet Validator
           {<Text fontSize="10px">{'(beta)'}</Text>}
         </Text>
         <Text
-            fontSize="25px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-          >
-            Check wallet.dat file for fake online
-          </Text>
+          fontSize="25px"
+          letterSpacing="-5.5%"
+          fontFamily="VT323"
+          textShadow="0 2px 2px #000000"
+        >
+          Check wallet.dat file for fake online
+        </Text>
         <form method="post" action="#" id="#">
           <Text
             fontSize="30px"
