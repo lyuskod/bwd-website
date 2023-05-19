@@ -3,15 +3,15 @@ import { Box, Flex, Text, Link } from '@chakra-ui/react'
 
 export const Tools = () => {
   const navigate = useNavigate()
-  const navigateWalletHash = () => navigate('/tools/wallethash')
-  const navigateFakeWalletCheck = () => navigate('/tools/walletcheck')
+  const navigateBitcoin2john = () => navigate('/tools/bitcoin2john')
+  const navigateValidator = () => navigate('/tools/validator')
   const navigateSolWalletCracker = () => navigate('/tools/solwalletcr')
 
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="520px">
+      <Box width="600px" className='pixel-border'>
         <Box>
-          <Text fontSize="48px" textShadow="0 5px #000000">
+          <Text fontSize="40px" textShadow="0 5px #000000">
             Tools
           </Text>
           <Link
@@ -23,10 +23,10 @@ export const Tools = () => {
             color="white"
             textDecoration="none"
             cursor="pointer"
-            onClick={navigateFakeWalletCheck}
-            _hover={{ color: '#fa690e' }}
+            onClick={navigateValidator}
+            _hover={{ color: '#e9bb00' }}
           >
-            Fake Wallet Checker (beta)
+            Wallet Validator (beta)
           </Link>
         </Box>
         <Box>
@@ -38,11 +38,11 @@ export const Tools = () => {
             isExternal
             color="white"
             textDecoration="none"
-            onClick={navigateWalletHash}
+            onClick={navigateBitcoin2john}
             cursor="pointer"
-            _hover={{ color: '#fa690e' }}
+            _hover={{ color: '#e9bb00' }}
           >
-            Wallet Hasher
+            Bitcoin2john (Online)
           </Link>
         </Box>
         <Box>
@@ -56,7 +56,7 @@ export const Tools = () => {
             textDecoration="none"
             onClick={navigateSolWalletCracker}
             cursor="pointer"
-            _hover={{ color: '#fa690e' }}
+            _hover={{ color: '#e9bb00' }}
           >
             Solana Wallet Cracker
           </Link>

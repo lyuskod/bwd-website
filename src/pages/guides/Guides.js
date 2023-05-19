@@ -8,9 +8,9 @@ export const Guides = () => {
 
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="520px">
+      <Box width="600px" className='pixel-border'>
         <Box>
-          <Text fontSize="48px" textShadow="0 5px #000000">
+          <Text fontSize="40px" textShadow="0 5px #000000">
             Guides
           </Text>
           <Link
@@ -23,7 +23,7 @@ export const Guides = () => {
             textDecoration="none"
             cursor="pointer"
             onClick={navigateHowToOpenWalletDat}
-            _hover={{ color: '#fa690e' }}
+            _hover={{ color: '#e9bb00' }}
           >
             Open wallet.dat
           </Link>
@@ -39,7 +39,7 @@ export const Guides = () => {
             textDecoration="none"
             onClick={navigateUnlockWalletDat}
             cursor="pointer"
-            _hover={{ color: '#fa690e' }}
+            _hover={{ color: '#e9bb00' }}
           >
             Unlock wallet.dat
           </Link>

@@ -11,10 +11,10 @@ import {
   Heading,
 } from '@chakra-ui/react'
 import axios from 'axios'
-import { routes } from '../contants/routes'
+import { routes } from '../../contants/routes'
 import React, { useEffect, useState } from 'react'
-import { cacheable } from '../scripts/cacheable'
-import { generateBlockchainComLink } from '../scripts/wallet-helper'
+import { cacheable } from '../../scripts/cacheable'
+import { generateBlockchainComLink } from '../../scripts/wallet-helper'
 
 export const WalletsTable = () => {
   const [data, setData] = useState([])
@@ -39,7 +39,7 @@ export const WalletsTable = () => {
         </Heading>
         <Box overflowY="auto" maxHeight="450px">
           <Table>
-            <Thead position="sticky" top={0} background="#fa690e">
+            <Thead position="sticky" top={0} background="#c09522">
               <Tr>
                 <Th style={{ textAlign: 'center' }}>No.</Th>
                 <Th style={{ textAlign: 'center' }}>Balance</Th>
@@ -58,9 +58,9 @@ export const WalletsTable = () => {
                         isExternal
                         href={generateBlockchainComLink(wallet.Address)}
                         _hover={{
-                          color: '#fa690e',
+                          color: '#e9bb00',
                         }}
-                        color="white"
+                        color="c09522"
                         textDecoration="none"
                       >
                         {wallet.Address}
@@ -70,9 +70,6 @@ export const WalletsTable = () => {
                       <Link href={`/view/${wallet.Address}`}>
                         <button
                           className="btn btn-contact"
-                          _hover={{
-                            bgColor: '#45216b',
-                          }}
                         >
                           View Details
                         </button>

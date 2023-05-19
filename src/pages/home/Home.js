@@ -8,8 +8,8 @@ export const Home = () => {
 
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="530px">
-        <Text fontSize="48px" textShadow="0 5px #000000">
+      <Box width="600px" className='pixel-border'>
+        <Text fontSize="40px" textShadow="0 5px #000000">
           Welcome!
         </Text>
         <Text
@@ -29,15 +29,16 @@ export const Home = () => {
           Super low prices due opening!
         </Text>
         <Button
-          backgroundColor="#fa690e"
-          _hover={{ bgColor: '#45216b' }}
-          borderRadius="5px"
-          boxShadow="0px 2px 2px 1px #0F0F0F"
-          color="white"
-          cursor="pointer"
-          fontFamily="inherit"
-          padding="15px"
-          margin="0 15px"
+        className='pixel-button'
+          // backgroundColor="#fa690e"
+          // _hover={{ bgColor: '#45216b' }}
+          // borderRadius="5px"
+          // boxShadow="0px 2px 2px 1px #0F0F0F"
+          // color="white"
+          // cursor="pointer"
+          // fontFamily="inherit"
+          // padding="15px"
+          // margin="0 15px"
           onClick={navigateToWallets}
         >
           BUY

@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { routes } from '../contants/routes'
+import { routes } from '../../../contants/routes'
 import { Box, Flex, Text, Button, Input } from '@chakra-ui/react'
-import { isValidWalletFromFormData } from '../scripts/wallet-helper'
+import { isValidWalletFromFormData } from '../../../scripts/wallet-helper'
 
-export const Checker = () => {
+export const Validator = () => {
   const [file, setFile] = useState(null)
   const [data, setData] = useState(null)
   const [message, setMessage] = useState(null)
@@ -36,13 +36,26 @@ export const Checker = () => {
     setData(null)
   }
   return (
-    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
+    <Flex
+      justify="center"
+      align="center"
+      height="100vh"
+      paddingBottom="150px"
+      className="pixel-border"
+    >
       <Box width="530px">
-        <Text fontSize="48px" textShadow="0 5px #000000">
-          Fake Wallet Checker
+        <Text fontSize="40px" textShadow="0 5px #000000">
+          Wallet Validator
           {<Text fontSize="10px">{'(beta)'}</Text>}
         </Text>
-
+        <Text
+            fontSize="25px"
+            letterSpacing="-5.5%"
+            fontFamily="VT323"
+            textShadow="0 2px 2px #000000"
+          >
+            Check wallet.dat file for fake online
+          </Text>
         <form method="post" action="#" id="#">
           <Text
             fontSize="30px"
@@ -70,28 +83,21 @@ export const Checker = () => {
             />
           </Box>
           <Button
-            backgroundColor="#fa690e"
-            _hover={{ bgColor: '#45216b' }}
-            borderRadius="5px"
-            boxShadow="0px 2px 2px 1px #0F0F0F"
-            color="white"
-            cursor="pointer"
-            fontFamily="inherit"
-            padding="15px"
-            margin="0 15px"
+            className="pixel-button"
+            // backgroundColor="#fa690e"
+            // _hover={{ bgColor: '#45216b' }}
+            // borderRadius="5px"
+            // boxShadow="0px 2px 2px 1px #0F0F0F"
+            // color="white"
+            // cursor="pointer"
+            // fontFamily="inherit"
+            // padding="15px"
+            // margin="0 15px"
             onClick={onSubmit}
           >
             Submit
           </Button>
         </form>
-        <Text
-          fontSize="25px"
-          letterSpacing="-5.5%"
-          fontFamily="VT323"
-          textShadow="0 2px 2px #000000"
-        >
-          Check your wallet.dat for fake using our online tool!
-        </Text>
       </Box>
     </Flex>
   )

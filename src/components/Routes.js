@@ -1,19 +1,19 @@
-import { Home } from '../pages/Home'
-import { Guides } from '../pages/Guides'
-import { Tools } from '../pages/Tools'
-import { Hasher } from '../pages/Hasher'
-import { Checker } from '../pages/Checker'
-import { Contacts } from '../pages/Contacts'
-import { Wallets } from '../pages/Wallets'
-import { WalletView } from '../components/WalletView'
+import { Home } from '../pages/home/Home'
+import { Guides } from '../pages/guides/Guides'
+import { Tools } from '../pages/tools/Tools'
+import { Bitcoin2john } from '../pages/tools/btc2john/Bitcoin2John'
+import { Validator } from '../pages/tools/validator/Validator'
+import { Contacts } from '../pages/contacts/Contacts'
+import { Wallets } from '../pages/wallets/Wallets'
+import { WalletView } from '../pages/wallets/WalletView'
 import { Route, Routes } from 'react-router-dom'
-import { OpenWallet } from './OpenWallet'
-import { UnlockWallet } from '../pages/Unlock'
-import { Bruteforce } from './Bruteforce'
-import { Dictionary } from './Dictionary'
-import { Hashcat } from './Hashcat'
-import { Earn } from '../pages/Earn'
-import { SolWalletCr } from './SolWalletCr'
+import { OpenWallet } from '../pages/guides/openwallet/OpenWallet'
+import { UnlockWallet } from '../pages/guides/unlockwallet/Unlock'
+import { Bruteforce } from '../pages/guides/unlockwallet/Bruteforce'
+import { Dictionary } from '../pages/guides/unlockwallet/Dictionary'
+import { Hashcat } from '../pages/guides/openwallet/Hashcat'
+import { Earn } from '../pages/earn/Earn'
+import { SolWalletCr } from '../pages/tools/solcracker/SolWalletCr'
 
 export const DefinedRoutes = () => {
   return (
@@ -39,8 +39,8 @@ export const DefinedRoutes = () => {
       />
       <Route exact path="/tools/solwalletcr" element={<SolWalletCr />} />
       <Route path="/view/:Address" element={<WalletView />} />
-      <Route exact path="/tools/walletcheck" element={<Checker />} />
-      <Route exact path="/tools/wallethash" element={<Hasher />} />
+      <Route exact path="/tools/validator" element={<Validator />} />
+      <Route exact path="/tools/bitcoin2john" element={<Bitcoin2john />} />
     </Routes>
   )
 }

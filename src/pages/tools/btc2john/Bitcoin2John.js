@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { routes } from '../contants/routes'
+import { routes } from '../../../contants/routes'
 import { Box, Flex, Text, Button, Input } from '@chakra-ui/react'
-import { isValidWalletFromFormData } from '../scripts/wallet-helper'
+import { isValidWalletFromFormData } from '../../../scripts/wallet-helper'
 
-export const Hasher = () => {
+export const Bitcoin2john = () => {
   const [file, setFile] = useState(null)
   const [hash, setHash] = useState(null)
   const [message, setMessage] = useState(null)
@@ -37,11 +37,25 @@ export const Hasher = () => {
     setHash(null)
   }
   return (
-    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
+    <Flex
+      justify="center"
+      align="center"
+      height="100vh"
+      paddingBottom="150px"
+      className="pixel-border"
+    >
       <Box width="530px">
         <Box>
-          <Text fontSize="48px" textShadow="0 5px #000000">
-            Wallet Hasher
+          <Text fontSize="40px" textShadow="0 5px #000000">
+            Bitcoin2john online
+          </Text>
+          <Text
+            fontSize="25px"
+            letterSpacing="-5.5%"
+            fontFamily="VT323"
+            textShadow="0 2px 2px #000000"
+          >
+            Fetch hash from wallet.dat file online
           </Text>
           <form method="post" action="#" id="#">
             <Text
@@ -69,29 +83,10 @@ export const Hasher = () => {
                 multiple={false}
               />
             </Box>
-            <Button
-              backgroundColor="#fa690e"
-              _hover={{ bgColor: '#45216b' }}
-              borderRadius="5px"
-              boxShadow="0px 2px 2px 1px #0F0F0F"
-              color="white"
-              cursor="pointer"
-              fontFamily="inherit"
-              padding="15px"
-              margin="0 15px"
-              onClick={onSubmit}
-            >
+            <Button className="pixel-button" onClick={onSubmit}>
               Submit
             </Button>
           </form>
-          <Text
-            fontSize="25px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-          >
-            Fetch hash from wallet.dat using our online tool!
-          </Text>
         </Box>
       </Box>
     </Flex>

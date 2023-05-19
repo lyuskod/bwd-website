@@ -2,10 +2,10 @@ import axios from 'axios'
 import {
   generateBlockchainComLink,
   generateBlockchairComLink,
-} from '../scripts/wallet-helper'
-import { routes } from '../contants/routes'
+} from '../../scripts/wallet-helper'
+import { routes } from '../../contants/routes'
 import React, { useEffect, useState } from 'react'
-import { cacheable } from '../scripts/cacheable'
+import { cacheable } from '../../scripts/cacheable'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Box, Link, Flex, Button, Text, Image } from '@chakra-ui/react'
 
@@ -40,32 +40,13 @@ export const WalletView = () => {
         margin="0 15px"
         loading="lazy"
       />
-      <Box width="520px">
+      <Box width="500px" height="560px" className="pixel-border">
         <Box bgColor="-moz-initial">
-          <Button
-            backgroundColor="red"
-            _hover={{ bgColor: '#45216b' }}
-            borderRadius="5px"
-            boxShadow="0px 2px 2px 1px #0F0F0F"
-            color="white"
-            cursor="pointer"
-            fontFamily="inherit"
-            padding="15px"
-            margin="0 15px"
-            onClick={navigateBack}
-          >
+          <Button className="pixel-button" bgColor="red" onClick={navigateBack}>
             GO BACK
           </Button>
           <Button
-            backgroundColor="#fa690e"
-            _hover={{ bgColor: '#45216b' }}
-            borderRadius="5px"
-            boxShadow="0px 2px 2px 1px #0F0F0F"
-            color="white"
-            cursor="pointer"
-            fontFamily="inherit"
-            padding="15px"
-            margin="0 15px"
+            className="pixel-button"
             onClick={() => window.open(wallet.Satoshi)}
           >
             BUY
@@ -86,7 +67,7 @@ export const WalletView = () => {
                 color="white"
                 textDecoration="none"
                 _hover={{
-                  color: '#fa690e',
+                  color: '#e9bb00',
                 }}
               >
                 {`↪️ View wallet on Blockchain.com`}
@@ -99,7 +80,7 @@ export const WalletView = () => {
                 color="white"
                 textDecoration="none"
                 _hover={{
-                  color: '#fa690e',
+                  color: '#e9bb00',
                 }}
               >
                 {`↪️ View wallet on Blockchair.com`}

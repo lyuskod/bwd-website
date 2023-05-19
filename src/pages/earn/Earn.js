@@ -6,8 +6,8 @@ export const Earn = () => {
   const navigateContacts = () => navigate('/contacts')
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="520px">
-        <Text fontSize="48px" textShadow="0 5px #000000">
+      <Box width="600px" className="pixel-border">
+        <Text fontSize="40px" textShadow="0 5px #000000">
           Earn
         </Text>
         <Text
@@ -24,18 +24,10 @@ export const Earn = () => {
           fontFamily="VT323"
           textShadow="0 2px 2px #000000"
         >
-          Contact us for more info
+          Contact to get for more info
         </Text>
         <Button
-          backgroundColor="#fa690e"
-          _hover={{ bgColor: '#45216b' }}
-          borderRadius="5px"
-          boxShadow="0px 2px 2px 1px #0F0F0F"
-          color="white"
-          cursor="pointer"
-          fontFamily="inherit"
-          padding="15px"
-          margin="0 15px"
+          className="pixel-button"
           onClick={navigateContacts}
         >
           SEE CONTACTS

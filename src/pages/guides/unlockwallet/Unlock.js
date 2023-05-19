@@ -9,9 +9,9 @@ export const UnlockWallet = () => {
 
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="520px">
+      <Box width="600px" className='pixel-border'>
         <Box>
-          <Text fontSize="48px" textShadow="0 5px #000000">
+          <Text fontSize="40px" textShadow="0 5px #000000">
             Unlock
           </Text>
           <Box>
@@ -25,7 +25,7 @@ export const UnlockWallet = () => {
               textDecoration="none"
               cursor="pointer"
               onClick={navigateHashcat}
-              _hover={{ color: '#fa690e' }}
+              _hover={{ color: '#e9bb00' }}
             >
               Hashcat (Watch first)
             </Link>
@@ -41,7 +41,7 @@ export const UnlockWallet = () => {
               textDecoration="none"
               cursor="pointer"
               onClick={navigateBruteforce}
-              _hover={{ color: '#fa690e' }}
+              _hover={{ color: '#e9bb00' }}
             >
               Bruteforce attack
             </Link>
@@ -57,7 +57,7 @@ export const UnlockWallet = () => {
               textDecoration="none"
               cursor="pointer"
               onClick={navigateDictionary}
-              _hover={{ color: '#fa690e' }}
+              _hover={{ color: '#e9bb00' }}
             >
               Dictionary attack
             </Link>
