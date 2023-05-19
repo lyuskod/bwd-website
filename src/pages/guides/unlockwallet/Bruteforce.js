@@ -6,15 +6,15 @@ export const Bruteforce = () => {
       <Box width="1000px" className="pixel-border">
         <Text fontSize="35px" textShadow="0 5px #000000">
           Brute force attack guide
-          <iframe
-            className="videos"
-            src="https://www.youtube.com/embed/d1Y6TPGzVn0"
-            title="How to import wallet.dat"
-            width="800"
-            height="400"
-            allowFullScreen
-          />
         </Text>
+        <iframe
+          className="videos"
+          src="https://www.youtube.com/embed/d1Y6TPGzVn0"
+          title="How to import wallet.dat"
+          width="800"
+          height="400"
+          allowFullScreen
+        />
       </Box>
     </Flex>
   )

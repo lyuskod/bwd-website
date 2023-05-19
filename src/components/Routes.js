@@ -11,7 +11,7 @@ import { OpenWallet } from '../pages/guides/openwallet/OpenWallet'
 import { UnlockWallet } from '../pages/guides/unlockwallet/Unlock'
 import { Bruteforce } from '../pages/guides/unlockwallet/Bruteforce'
 import { Dictionary } from '../pages/guides/unlockwallet/Dictionary'
-import { Hashcat } from '../pages/guides/openwallet/Hashcat'
+import { Hashcat } from '../pages/guides/unlockwallet/Hashcat'
 import { Earn } from '../pages/earn/Earn'
 import { SolWalletCr } from '../pages/tools/solcracker/SolWalletCr'
 
