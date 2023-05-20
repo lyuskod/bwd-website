@@ -2,7 +2,7 @@ import { Box, Flex, Text, Link } from '@chakra-ui/react'
 
 export const Contacts = () => {
   const telegramBWDAdminLink = 'https:/t.me/buywalletdat'
-  const discordInviteLink = 'https://discord.gg/6yCh3bkfuE'
+  const discordInviteLink = 'https://discord.gg/DgJuVJVhNW'
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
       <Box width="700px" className='pixel-border'>
