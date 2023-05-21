@@ -19,11 +19,12 @@ import { generateBlockchainComLink } from '../../scripts/wallet-helper'
 export const WalletsTable = () => {
   const [data, setData] = useState([])
   const loadData = async () => {
-    const response = await cacheable(
-      async () => await axios.get(routes.getAllWallets),
-      'wallets',
-      {}
-    )
+    // const response = await cacheable(
+    //   async () => await axios.get(routes.getAllWallets),
+    //   'wallets',
+    //   {}
+    // )
+    const response = await axios.get(routes.getAllWallets)
     setData(response.data)
   }
 
@@ -65,9 +66,7 @@ export const WalletsTable = () => {
                     </Td>
                     <Td>
                       <Link href={`/view/${wallet.Address}`}>
-                        <button
-                          className="btn btn-contact"
-                        >
+                        <button className="btn btn-contact">
                           View Details
                         </button>
                       </Link>
