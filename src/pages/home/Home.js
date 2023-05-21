@@ -18,7 +18,7 @@ export const Home = () => {
           fontFamily="VT323"
           textShadow="0 2px 2px #000000"
         >
-          Shop of bitcoin wallets with lost passwords
+          Buy wallet.dat with balance and lost password
         </Text>
         <Text
           fontSize="25px"
@@ -26,7 +26,7 @@ export const Home = () => {
           fontFamily="VT323"
           textShadow="0 2px 2px #000000"
         >
-          Super low prices due opening!
+          Just 30$ per wallet
         </Text>
         <Button
         className='pixel-button'
