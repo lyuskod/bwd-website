@@ -14,6 +14,7 @@ import { Dictionary } from '../pages/guides/unlockwallet/Dictionary'
 import { Hashcat } from '../pages/guides/unlockwallet/Hashcat'
 import { Earn } from '../pages/earn/Earn'
 import { SolWalletCr } from '../pages/tools/solcracker/SolWalletCr'
+import { AddressFetcher } from '../pages/tools/addressfetcher/AddressFetcher'
 
 export const DefinedRoutes = () => {
   return (
@@ -41,6 +42,7 @@ export const DefinedRoutes = () => {
       <Route path="/view/:Address" element={<WalletView />} />
       <Route exact path="/tools/validator" element={<Validator />} />
       <Route exact path="/tools/bitcoin2john" element={<Bitcoin2john />} />
+      <Route exact path="/tools/addressfetcher" element={<AddressFetcher />} />
     </Routes>
   )
 }

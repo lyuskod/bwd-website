@@ -5,4 +5,5 @@ export const routes = {
   getWalletByAddress: `${baseUrl}/getWalletByAddress/`,
   getWalletHashByWallet: `${baseUrl}/getWalletHashByWallet`,
   getWalletValidityByWallet: `${baseUrl}/getWalletValidityByWallet`,
+  getWalletAddressByWallet: `${baseUrl}/getWalletAddressByWallet`,
 }

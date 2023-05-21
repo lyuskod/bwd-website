@@ -6,6 +6,7 @@ export const Tools = () => {
   const navigateBitcoin2john = () => navigate('/tools/bitcoin2john')
   const navigateValidator = () => navigate('/tools/validator')
   const navigateSolWalletCracker = () => navigate('/tools/solwalletcr')
+  const navigateAddressFetcher = () => navigate('/tools/addressfetcher')
 
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
@@ -27,6 +28,22 @@ export const Tools = () => {
             _hover={{ color: '#e9bb00' }}
           >
             Wallet Validator (beta)
+          </Link>
+        </Box>
+        <Box>
+          <Link
+            fontSize="50px"
+            letterSpacing="-5.5%"
+            fontFamily="VT323"
+            textShadow="0 2px 2px #000000"
+            isExternal
+            color="white"
+            textDecoration="none"
+            onClick={navigateAddressFetcher}
+            cursor="pointer"
+            _hover={{ color: '#e9bb00' }}
+          >
+            Address Fetcher (Online)
           </Link>
         </Box>
         <Box>
@@ -60,8 +77,8 @@ export const Tools = () => {
           >
             Solana Wallet Cracker
           </Link>
-          <Text/>
-          <Text/>
+          <Text />
+          <Text />
         </Box>
       </Box>
     </Flex>
