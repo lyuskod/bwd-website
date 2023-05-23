@@ -9,11 +9,11 @@ export const Earn = () => {
       <Box className="pixel-border">
         <Text className="main-text">Earn</Text>
         <Text className="primary-text">
-          Send your wallet.dat (even public one) to us and earn 50% from each
-          sale
+          Send any private wallet.dat to us and earn 50% from each
+          sale + 10% of balance if it will be unlocked
         </Text>
         <Text className="secondary-text">
-          Contact to get for more info
+          More info on Discord
         </Text>
         <Button className="pixel-button" onClick={navigateContacts}>
           SEE CONTACTS

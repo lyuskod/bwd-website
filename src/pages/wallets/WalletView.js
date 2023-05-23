@@ -53,20 +53,22 @@ export const WalletView = () => {
           >
             BUY
           </Button>
-          <Text className="primary-text" align="left">
+          <Box align="left">
             {isMobile() ? (
               <Link
                 isExternal
                 href={wallet.Screenshot}
                 className="link"
                 color="#fa690e"
-              >{`->Click to see wallet screenshot<-`}</Link>
+              >
+                <Text align="center">{`->Click to see wallet screenshot<-`}</Text>
+              </Link>
             ) : (
               <Text></Text>
             )}
-            <Text>{`💸 Balance: ${wallet.Balance} BTC`}</Text>
-            <Text>{`❔ Hints: ${wallet.Hints}`}</Text>
-            <Text>
+            <Text className="primary-text">{`💸 Balance: ${wallet.Balance} BTC`}</Text>
+            <Text className="primary-text">{`❔ Hints: ${wallet.Hints}`}</Text>
+            <Text className="primary-text">
               <Link
                 href={generateBlockchainComLink(wallet.Address)}
                 isExternal
@@ -79,7 +81,7 @@ export const WalletView = () => {
                 {`↪️ View wallet on Blockchain.com`}
               </Link>
             </Text>
-            <Text>
+            <Text className="primary-text">
               <Link
                 href={generateBlockchairComLink(wallet.Address)}
                 isExternal
@@ -92,9 +94,9 @@ export const WalletView = () => {
                 {`↪️ View wallet on Blockchair.com`}
               </Link>
             </Text>
-            <Text>{`📦 Package: ${wallet.Package}`}</Text>
-            <Text>{`💬 Comments: ${wallet.Comments}`}</Text>
-          </Text>
+            <Text className="primary-text">{`📦 Package: ${wallet.Package}`}</Text>
+            <Text className="primary-text">{`💬 Comments: ${wallet.Comments}`}</Text>
+          </Box>
         </Box>
       </Box>
     </Flex>

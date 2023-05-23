@@ -6,7 +6,7 @@ import { Validator } from '../pages/tools/validator/Validator'
 import { Contacts } from '../pages/contacts/Contacts'
 import { Wallets } from '../pages/wallets/Wallets'
 import { WalletView } from '../pages/wallets/WalletView'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { OpenWallet } from '../pages/guides/openwallet/OpenWallet'
 import { UnlockWallet } from '../pages/guides/unlockwallet/Unlock'
 import { Bruteforce } from '../pages/guides/unlockwallet/Bruteforce'
@@ -19,7 +19,8 @@ import { AddressFetcher } from '../pages/tools/addressfetcher/AddressFetcher'
 export const DefinedRoutes = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route exact path="/" element={<Navigate to="/home" />} />
+      <Route exact path="/home" element={<Home />} />
       <Route exact path="/tools" element={<Tools />} />
       <Route exact path="/guides" element={<Guides />} />
       <Route exact path="/contacts" element={<Contacts />} />

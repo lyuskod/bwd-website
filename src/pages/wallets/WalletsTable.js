@@ -44,7 +44,7 @@ export const WalletsTable = () => {
             <Tbody>
               {data.map((wallet, index) => {
                 return (
-                  <Tr>
+                  <Tr key={index + 1}>
                     <Td>{index + 1}</Td>
                     <Td>{`💰 ${wallet.Balance} 💰`}</Td>
                     <Td>

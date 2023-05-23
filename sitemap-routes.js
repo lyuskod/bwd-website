@@ -4,6 +4,7 @@ import React from 'react'
 export default (
   <Routes>
     <Route path="/" />
+    <Route path="/home" />
     <Route path="/tools" />
     <Route path="/guides" />
     <Route path="/contacts" />
