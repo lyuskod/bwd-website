@@ -7,40 +7,14 @@ export const Home = () => {
   const navigateToWallets = () => navigate('/wallets')
 
   return (
-    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="700px" className='pixel-border'>
-        <Text fontSize="40px" textShadow="0 5px #000000">
-          Welcome!
-        </Text>
-        <Text
-          fontSize="30px"
-          letterSpacing="-5.5%"
-          fontFamily="VT323"
-          textShadow="0 2px 2px #000000"
-        >
+    <Flex className="outer-flex">
+      <Box className="pixel-border">
+        <Text className="main-text">Welcome!</Text>
+        <Text className="primary-text">
           Buy wallet.dat with balance and lost password
         </Text>
-        <Text
-          fontSize="25px"
-          letterSpacing="-5.5%"
-          fontFamily="VT323"
-          textShadow="0 2px 2px #000000"
-        >
-          Just 30$ per wallet
-        </Text>
-        <Button
-        className='pixel-button'
-          // backgroundColor="#fa690e"
-          // _hover={{ bgColor: '#45216b' }}
-          // borderRadius="5px"
-          // boxShadow="0px 2px 2px 1px #0F0F0F"
-          // color="white"
-          // cursor="pointer"
-          // fontFamily="inherit"
-          // padding="15px"
-          // margin="0 15px"
-          onClick={navigateToWallets}
-        >
+        <Text className="secondary-text">Just 30$ per wallet</Text>
+        <Button className="pixel-button" onClick={navigateToWallets}>
           BUY
         </Button>
       </Box>

@@ -1,0 +1,87 @@
+.outer-flex {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-bottom: 150px;
+}
+
+.main-text {
+  font-size: 40px;
+}
+
+.primary-text {
+  font-size: 30px;
+  letter-spacing: -5.5%;
+  font-family: 'VT323';
+}
+
+.secondary-text {
+  font-size: 25px;
+  letter-spacing: -5.5%;
+  font-family: 'VT323';
+}
+
+.link {
+  font-size: 50px;
+  letter-spacing: -5.5%;
+  font-family: 'VT323';
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #e9bb00;
+}
+
+.pixel-border {
+  width: 700px;
+  margin: 2em auto;
+  box-shadow: -15px 0 0 0 white, 15px 0 0 0 white, 0 -15px 0 0 white,
+    0 15px 0 0 white;
+  background-color: black;
+}
+
+.pixel-button {
+  border-radius: 1px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 15px;
+  margin: 2em auto;
+  background-color: #c09522;
+
+  box-shadow: -15px 0 0 0 white, 15px 0 0 0 white, 0 -15px 0 0 white,
+    0 15px 0 0 white;
+}
+
+@media screen and (max-width: 600px) {
+  .outer-flex {
+    height: 100vh;
+    padding-bottom: 75px;
+  }
+
+  .main-text {
+    font-size: 30px;
+  }
+
+  .primary-text {
+    font-size: 20px;
+  }
+
+  .secondary-text {
+    font-size: 18px;
+  }
+
+  .link {
+    font-size: 25px;
+    letter-spacing: -5.5%;
+  }
+
+  .pixel-button {
+    padding: 7.5px;
+  }
+  .pixel-border {
+    width: 400px;
+  }
+}

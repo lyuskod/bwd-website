@@ -1,4 +1,6 @@
 import './App.css'
+import './NavBar.css'
+import './General.css'
 import './FileUpload.css'
 import './Ticker.css'
 import { Box } from '@chakra-ui/react'

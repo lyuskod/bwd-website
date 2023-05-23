@@ -9,72 +9,26 @@ export const Tools = () => {
   const navigateAddressFetcher = () => navigate('/tools/addressfetcher')
 
   return (
-    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="700px" className="pixel-border">
+    <Flex className="outer-flex">
+      <Box className="pixel-border">
         <Box>
-          <Text fontSize="40px" textShadow="0 5px #000000">
-            Tools
-          </Text>
-          <Link
-            fontSize="50px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-            isExternal
-            color="white"
-            textDecoration="none"
-            cursor="pointer"
-            onClick={navigateValidator}
-            _hover={{ color: '#e9bb00' }}
-          >
+          <Text className="main-text">Tools</Text>
+          <Link className="link" isExternal onClick={navigateValidator}>
             Wallet Validator (beta)
           </Link>
         </Box>
         <Box>
-          <Link
-            fontSize="50px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-            isExternal
-            color="white"
-            textDecoration="none"
-            onClick={navigateAddressFetcher}
-            cursor="pointer"
-            _hover={{ color: '#e9bb00' }}
-          >
+          <Link className="link" isExternal onClick={navigateAddressFetcher}>
             Address Fetcher (Online)
           </Link>
         </Box>
         <Box>
-          <Link
-            fontSize="50px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-            isExternal
-            color="white"
-            textDecoration="none"
-            onClick={navigateBitcoin2john}
-            cursor="pointer"
-            _hover={{ color: '#e9bb00' }}
-          >
+          <Link className="link" isExternal onClick={navigateBitcoin2john}>
             Bitcoin2john (Online)
           </Link>
         </Box>
         <Box>
-          <Link
-            fontSize="50px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-            isExternal
-            color="white"
-            textDecoration="none"
-            onClick={navigateSolWalletCracker}
-            cursor="pointer"
-            _hover={{ color: '#e9bb00' }}
-          >
+          <Link className="link" isExternal onClick={navigateSolWalletCracker}>
             Solana Wallet Cracker
           </Link>
           <Text />
