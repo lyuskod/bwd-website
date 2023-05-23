@@ -95,6 +95,14 @@
   object-position: center;
 }
 
+.wallet-view-img {
+  width: 650px;
+  height: 500px;
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .videos {
   width: 700px;
   height: 350px;
@@ -171,5 +179,13 @@
   .videos {
     width: 400px;
     height: 250px;
+  }
+
+  .wallet-view-img {
+    width: 325px;
+    height: 250px;
+    margin-top: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }

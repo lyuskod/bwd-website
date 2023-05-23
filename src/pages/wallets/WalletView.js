@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react'
 import { cacheable } from '../../scripts/cacheable'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Box, Link, Flex, Button, Text, Image } from '@chakra-ui/react'
+import { isMobile } from '../../scripts/ismobile'
 
 export const WalletView = () => {
   const navigate = useNavigate()
@@ -31,16 +32,17 @@ export const WalletView = () => {
   })
 
   return (
-    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Image
-        src={wallet.Screenshot}
-        cursor="pointer"
-        boxSize="500px"
-        width="800px"
-        margin="0 15px"
-        loading="lazy"
-      />
-      <Box width="500px" height="560px" className="pixel-border">
+    <Flex className="outer-flex">
+      {isMobile() ? (
+        <Text></Text>
+      ) : (
+        <Image
+          className="wallet-view-img"
+          src={wallet.Screenshot}
+          loading="lazy"
+        />
+      )}
+      <Box className="pixel-border">
         <Box bgColor="black">
           <Button className="pixel-button" bgColor="red" onClick={navigateBack}>
             GO BACK
@@ -51,13 +53,17 @@ export const WalletView = () => {
           >
             BUY
           </Button>
-          <Text
-            fontSize="30px"
-            letterSpacing="-5.5%"
-            align="left"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-          >
+          <Text className="primary-text" align="left">
+            {isMobile() ? (
+              <Link
+                isExternal
+                href={wallet.Screenshot}
+                className="link"
+                color="#fa690e"
+              >{`->Click to see wallet screenshot<-`}</Link>
+            ) : (
+              <Text></Text>
+            )}
             <Text>{`💸 Balance: ${wallet.Balance} BTC`}</Text>
             <Text>{`❔ Hints: ${wallet.Hints}`}</Text>
             <Text>
