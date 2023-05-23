@@ -36,36 +36,15 @@ export const Validator = () => {
     setData(null)
   }
   return (
-    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="700px" className="pixel-border">
-        <Text fontSize="40px" textShadow="0 5px #000000">
-          Wallet Validator
-          {<Text fontSize="10px">{'(beta)'}</Text>}
-        </Text>
-        <Text
-          fontSize="25px"
-          letterSpacing="-5.5%"
-          fontFamily="VT323"
-          textShadow="0 2px 2px #000000"
-        >
+    <Flex className="outer-flex">
+      <Box className="pixel-border">
+        <Text className="main-text">Wallet Validator</Text>
+        <Text className="primary-text">
           Check wallet.dat file for fake online
         </Text>
         <form method="post" action="#" id="#">
-          <Text
-            fontSize="30px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-          >
-            {message}
-          </Text>
-          <Text
-            fontSize="30px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-            align="center"
-          >
+          <Text className="primary-text">{message}</Text>
+          <Text className="primary-text">
             {data?.validity ? `Validity: ${data.validity}%` : ''}
           </Text>
           <Box className="form-group files">
@@ -76,19 +55,7 @@ export const Validator = () => {
               multiple={false}
             />
           </Box>
-          <Button
-            className="pixel-button"
-            // backgroundColor="#fa690e"
-            // _hover={{ bgColor: '#45216b' }}
-            // borderRadius="5px"
-            // boxShadow="0px 2px 2px 1px #0F0F0F"
-            // color="white"
-            // cursor="pointer"
-            // fontFamily="inherit"
-            // padding="15px"
-            // margin="0 15px"
-            onClick={onSubmit}
-          >
+          <Button className="pixel-button" onClick={onSubmit}>
             Submit
           </Button>
         </form>

@@ -37,37 +37,15 @@ export const AddressFetcher = () => {
   }
   console.log(data)
   return (
-    <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-      <Box width="700px" className="pixel-border">
-        <Text fontSize="40px" textShadow="0 5px #000000">
-          Address fetcher
-        </Text>
-        <Text
-          fontSize="25px"
-          letterSpacing="-5.5%"
-          fontFamily="VT323"
-          textShadow="0 2px 2px #000000"
-        >
+    <Flex className="outer-flex">
+      <Box className="pixel-border">
+        <Text className="main-text">Address fetcher</Text>
+        <Text className="primary-text">
           {data == null ? 'Fetch address from wallet.dat (Online)' : ''}
         </Text>
         <form method="post" action="#" id="#">
-          <Text
-            fontSize="30px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-          >
-            {message}
-          </Text>
-          <Text
-            fontSize="30px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-            align="center"
-          >
-            {data == null ? '' : data}
-          </Text>
+          <Text className="primary-text">{message}</Text>
+          <Text className="primary-text">{data == null ? '' : data}</Text>
           <Box className="form-group files">
             <Input
               type="file"
@@ -76,10 +54,7 @@ export const AddressFetcher = () => {
               multiple={false}
             />
           </Box>
-          <Button
-            className="pixel-button"
-            onClick={onSubmit}
-          >
+          <Button className="pixel-button" onClick={onSubmit}>
             Submit
           </Button>
         </form>

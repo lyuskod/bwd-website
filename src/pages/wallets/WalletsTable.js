@@ -8,22 +8,18 @@ import {
   Thead,
   Tbody,
   TableContainer,
-  Heading,
 } from '@chakra-ui/react'
 import axios from 'axios'
 import { routes } from '../../contants/routes'
 import React, { useEffect, useState } from 'react'
-import { cacheable } from '../../scripts/cacheable'
-import { generateBlockchainComLink } from '../../scripts/wallet-helper'
+import {
+  generateBlockchainComLink,
+  getShortWalletAddressRepresentation,
+} from '../../scripts/wallet-helper'
 
 export const WalletsTable = () => {
   const [data, setData] = useState([])
   const loadData = async () => {
-    // const response = await cacheable(
-    //   async () => await axios.get(routes.getAllWallets),
-    //   'wallets',
-    //   {}
-    // )
     const response = await axios.get(routes.getAllWallets)
     setData(response.data)
   }
@@ -33,7 +29,7 @@ export const WalletsTable = () => {
   }, [])
 
   return (
-    <TableContainer className="styled-table" maxHeight="450px">
+    <TableContainer className="styled-table">
       <Box overflowY="auto">
         <Box overflowY="auto" maxHeight="450px">
           <Table>
@@ -61,12 +57,12 @@ export const WalletsTable = () => {
                         color="c09522"
                         textDecoration="none"
                       >
-                        {wallet.Address}
+                        {getShortWalletAddressRepresentation(wallet.Address)}
                       </Link>
                     </Td>
                     <Td>
                       <Link href={`/view/${wallet.Address}`}>
-                        <button className="btn btn-contact">
+                        <button className="wallet-view-details-btn">
                           View Details
                         </button>
                       </Link>

@@ -37,43 +37,16 @@ export const Bitcoin2john = () => {
     setHash(null)
   }
   return (
-    <Flex
-      justify="center"
-      align="center"
-      height="100vh"
-      paddingBottom="150px"
-    >
-      <Box width="700px" className="pixel-border">
+    <Flex className="outer-flex">
+      <Box className="pixel-border">
         <Box>
-          <Text fontSize="40px" textShadow="0 5px #000000">
-            Bitcoin2john online
-          </Text>
-          <Text
-            fontSize="25px"
-            letterSpacing="-5.5%"
-            fontFamily="VT323"
-            textShadow="0 2px 2px #000000"
-          >
+          <Text className="main-text">Bitcoin2john online</Text>
+          <Text className="primary-text">
             Fetch hash from wallet.dat file online
           </Text>
           <form method="post" action="#" id="#">
-            <Text
-              fontSize="30px"
-              letterSpacing="-5.5%"
-              fontFamily="VT323"
-              textShadow="0 2px 2px #000000"
-            >
-              {message}
-            </Text>
-            <Text
-              fontSize="20px"
-              letterSpacing="-5.5%"
-              fontFamily="VT323"
-              textShadow="0 2px 2px #000000"
-              align="center"
-            >
-              {hash}
-            </Text>
+            <Text className="primary-text">{message}</Text>
+            <Text className="primary-text">{hash}</Text>
             <Box className="form-group files">
               <Input
                 type="file"

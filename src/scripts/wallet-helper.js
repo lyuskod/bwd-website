@@ -13,7 +13,7 @@ export const getShortWalletAddressRepresentation = (address) => {
   const symbols_slice = 4
   const fPart = address.slice(0, symbols_slice)
   const lPart = address.slice(address.length - symbols_slice)
-  return `${fPart}...${lPart}`
+  return `${fPart}..${lPart}`
 }
 
 export const parseAddressFromWalletDatContent = (content) => {

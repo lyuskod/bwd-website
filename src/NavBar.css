@@ -51,11 +51,12 @@
   }
 
   .navbar-topics-flex {
-    width: 25%;
-    padding: 15px;
+    width: 70%;
+    padding: 30px;
   }
 
   .navbar-topics-box {
     margin-left: 12.5px;
+    font-size: 9px;
   }
 }
