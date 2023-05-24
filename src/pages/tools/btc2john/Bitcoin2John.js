@@ -7,7 +7,19 @@ import { isValidWalletFromFormData } from '../../../scripts/wallet-helper'
 export const Bitcoin2john = () => {
   const [file, setFile] = useState(null)
   const [hash, setHash] = useState(null)
-  const [message, setMessage] = useState(null)
+  const [copied, setCopied] = useState(false)
+  const [message, setMessage] = useState(
+    'Fetch hash from wallet.dat file online'
+  )
+
+  const handleCopyHashToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(hash)
+      setCopied(true)
+    } catch (err) {
+      setMessage('Failed to copy to clipboard')
+    }
+  }
 
   const onInputChange = (e) => {
     if (hash) setHash(null)
@@ -41,12 +53,21 @@ export const Bitcoin2john = () => {
       <Box className="pixel-border">
         <Box>
           <Text className="main-text">Bitcoin2john online</Text>
-          <Text className="primary-text">
-            Fetch hash from wallet.dat file online
-          </Text>
           <form method="post" action="#" id="#">
-            <Text className="primary-text">{message}</Text>
-            <Text className="primary-text">{hash}</Text>
+            <Text className="primary-text">
+              {' '}
+              {hash ? (
+                <Button
+                  className="pixel-button"
+                  onClick={handleCopyHashToClipboard}
+                >
+                  {copied ? 'Copied' : 'Copy hash to clipboard'}
+                </Button>
+              ) : (
+                message
+              )}
+            </Text>
+
             <Box className="form-group files">
               <Input
                 type="file"

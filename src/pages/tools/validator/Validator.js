@@ -7,7 +7,7 @@ import { isValidWalletFromFormData } from '../../../scripts/wallet-helper'
 export const Validator = () => {
   const [file, setFile] = useState(null)
   const [data, setData] = useState(null)
-  const [message, setMessage] = useState(null)
+  const [message, setMessage] = useState('Check wallet.dat file for fake online')
 
   const onInputChange = (e) => {
     if (data) setData(null)
@@ -39,13 +39,9 @@ export const Validator = () => {
     <Flex className="outer-flex">
       <Box className="pixel-border">
         <Text className="main-text">Wallet Validator</Text>
-        <Text className="primary-text">
-          Check wallet.dat file for fake online
-        </Text>
         <form method="post" action="#" id="#">
-          <Text className="primary-text">{message}</Text>
           <Text className="primary-text">
-            {data?.validity ? `Validity: ${data.validity}%` : ''}
+            {data?.validity ? `Validity: ${data.validity}%` : message}
           </Text>
           <Box className="form-group files">
             <Input

@@ -29,7 +29,6 @@ export const isValidWalletFromFormData = async (file) => {
   const content = await file.text()
   return (
     file.name.endsWith('.dat') &&
-    content.includes('ckey!') &&
     parseAddressFromWalletDatContent(content)
   )
 }

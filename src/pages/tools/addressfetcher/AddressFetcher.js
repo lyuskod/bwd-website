@@ -7,7 +7,7 @@ import { isValidWalletFromFormData } from '../../../scripts/wallet-helper'
 export const AddressFetcher = () => {
   const [file, setFile] = useState(null)
   const [data, setData] = useState(null)
-  const [message, setMessage] = useState(null)
+  const [message, setMessage] = useState('Fetch address from wallet.dat')
 
   const onInputChange = (e) => {
     if (data) setData(null)
@@ -35,14 +35,10 @@ export const AddressFetcher = () => {
     }
     setData(null)
   }
-  console.log(data)
   return (
     <Flex className="outer-flex">
       <Box className="pixel-border">
         <Text className="main-text">Address fetcher</Text>
-        <Text className="primary-text">
-          {data == null ? 'Fetch address from wallet.dat (Online)' : ''}
-        </Text>
         <form method="post" action="#" id="#">
           <Text className="primary-text">{message}</Text>
           <Text className="primary-text">{data == null ? '' : data}</Text>
